@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= @title %></title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Original+Surfer" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+  
+  <header>Planning your day</header>
+  <section>
+    <div class="points">
+      <h3>To do</h3>
+      <ul class="todo">
+      <% @notes.each do |note| %>
+        <% if note['done'] == false %>
+        <li><%= note['title'] %><span class="complete"><a href="/<%= note['id'] %>/complete" title='Completar'><i class="fa fa-check-circle" aria-hidden="true"></i></a></span><span class="delete"><a href="/<%= note['id'] %>/delete" title='Eliminar'><i class="fa fa-times" aria-hidden="true"></i></a></span> </li>
+        <% end %>
+        <% end %>
+      </ul>
+      <form action="/" method="post">
+        <input name="content" type="text" id="new-task" placeholder="Add Your Task">
+      </form>
+    </div>
+
+    <div class="points">
+      <h3>Done</h3>
+      <ul class="done">
+      <% @notes.each do |note| %>
+        <% if note['done'] == true %>
+        <li><%= note['title'] %><span class="delete"><a href="/<%= note['id'] %>/delete" title='Eliminar'><i class="fa fa-times" aria-hidden="true"></i></a></span> </li>
+        <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+  background-image: url("https://wallpaperaccess.com/full/343990.jpg");
+}
+
+header {
+  font-family: 'Arizonia', cursive;
+  font-size: 400%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+h3 {
+  font-family:'Original Surfer', cursive;
+}
+
+.points {
+  width: 500px;
+  vertical-align: top;
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  font-size: 18px;
+  background-color: #E7EAE8;
+  padding-left: 0;
+  min-height: 60px;
+  border: 2px solid #070808;
+}
+
+ul li {
+  position: relative;
+  color: #66665D;
+  list-style-type: none;
+  padding: 18px;
+  border-bottom: 2px solid #0f0f0e;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul.done li {
+  color: #ABABA4;
+  text-decoration: inherit;
+}
+
+ul .delete {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px white;
+}
+
+ul .complete {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  font-size: 15px;
+  width: 100%;
+  border: 2px solid #D3D9D5;
+  padding: 18px;
+}
+
+a:hover, a:visited, a:link, a:active {
+  color: #237B3E;
+}
